@@ -33,7 +33,12 @@
 
             template(v-else) {{ props.row[column.field] }}
 
-      b-input.page-films__per-page-input(v-model="perPage" type="number" slot="bottom-left" title="Items per Page")
+      b-input.page-films__per-page-input(
+        v-model="perPage"
+        type="number"
+        slot="bottom-left" 
+        itle="Items per Page"
+      )
 
 </template>
 
@@ -46,7 +51,6 @@ export default {
   data() {
     return {
       isPaginated: true,
-      defaultSortDirection: 'asc',
       currentPage: 1,
       perPage: 3,
       columns:[
